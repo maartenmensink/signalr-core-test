@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { HubConnection, HttpConnection } from '@aspnet/signalr-client';
+import { HubConnection, HttpConnection } from '@aspnet/signalr-client';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'app';
 
  constructor(){
-  //const http = new HttpConnection('http://localhost:9000/events');
-//  const hub = new HubConnection(http);
+  const http = new HttpConnection('http://localhost:9000/events');
+  const hub = new HubConnection(http);
  }
 
 }
